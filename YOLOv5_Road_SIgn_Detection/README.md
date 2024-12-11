@@ -5,16 +5,16 @@ This repository demonstrates an object detection pipeline for road sign detectio
 ---
 
 ## 📂 Repository Structure
-├── notebooks/
-│   ├── dataset1_training.ipynb      # Notebook for training on the first dataset
-│   ├── dataset2_training.ipynb      # Notebook for training on the second dataset
-├── models/
-│   ├── common.py                    # Modified YOLOv5 modules (SE Block and BiFPN)
-│   ├── yolo.py                      # Detection-specific modules
-│   └── yolov5s.yaml         # Model architecture definition
-├── dataset/
-│   └── data.yaml                    # Update with paths to your dataset
-└── README.md                        # Project documentation
+├── notebooks/ /n
+│   ├── dataset1_training.ipynb      # Notebook for training on the first dataset /n
+│   ├── dataset2_training.ipynb      # Notebook for training on the second dataset /n
+├── models/ /n
+│   ├── common.py                    # Modified YOLOv5 modules (SE Block and BiFPN) /n
+│   ├── yolo.py                      # Detection-specific modules /n
+│   └── yolov5s.yaml         # Model architecture definition /n 
+├── dataset/ /n
+│   └── data.yaml                    # Update with paths to your dataset /n
+└── README.md                        # Project documentation /n
 
 ---
 
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 ### 3. Training
 
 Choose the notebook for the appropriate dataset:
-	•	For Dataset 1: Use YOLOv5proposed1.ipynb.
+	•	For Dataset 1: Use YOLOv5proposed1.ipynb. /n
 	•	For Dataset 2: Use YOLOv5proposed2.ipynb.
 
 Modify the data.yaml file in the dataset/ folder to reflect the dataset configuration before running the notebook.
