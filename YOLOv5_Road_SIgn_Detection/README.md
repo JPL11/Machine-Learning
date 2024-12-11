@@ -51,13 +51,35 @@ git clone https://github.com/ultralytics/yolov5.git
 cd yolov5
 pip install -r requirements.txt
 ```
-### 2. Dataset Preparation
-	•	Prepare your dataset in YOLOv5 format (with images and labels).
+### 2. Replace Files
+
+Replace the original files in the models/ directory of the YOLOv5 repository with the modified files provided in this project:
+	•	Replace models/common.py with the version in this repository.
+	•	Replace models/yolo.py with the version in this repository.
+	•	Replace the yolov5_modified.yaml in the models/ directory.
+
+The modified files include the implementations of the SE Block, BiFPN, and other architectural changes.
+
+### 3. Running the Notebooks in Google Colab
+
+The provided notebooks are designed to be executed in Google Colab to leverage their GPU resources for training.
+
+	1.	Open the desired notebook in Google Colab:
+	•	For Dataset 1 (Korean Traffic Signs): Use notebooks/dataset1_training.ipynb.
+	•	For Dataset 2 (Mixed Traffic Signs): Use notebooks/dataset2_training.ipynb.
+ 
+	2.	Upload the data.yaml file to Colab:
+ 	•	Prepare your dataset in YOLOv5 format (with images and labels).
 	•	Update dataset/data.yaml:
 	•	Set test, train and val to the paths of your testing, training and validation datasets.
 	•	Specify the number of classes and their names.
+ 
+	3.	Enable GPU acceleration:
+	•	Go to Runtime > Change runtime type > Hardware accelerator > GPU.
+ 
+	4.	Execute the cells to train the model.
 
-### 3. Training
+### 4. Training
 
 Choose the notebook for the appropriate dataset:
 	•	For Dataset 1: Use YOLOv5proposed1.ipynb. 
@@ -65,7 +87,7 @@ Choose the notebook for the appropriate dataset:
 
 Modify the data.yaml file in the dataset/ folder to reflect the dataset configuration before running the notebook.
 
-### 4. Evaluation
+### 5. Evaluation
 
 Evaluate the model using the final trained weights. Save the results for comparison and analysis.
 
