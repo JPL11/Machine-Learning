@@ -23,6 +23,25 @@ The model architecture is defined in `models/yolov5s.yaml`. The changes include:
 
 ---
 
+## 🛠️ Datasets
+
+This project uses two datasets for training and evaluation:
+
+1. **[Korean Traffic Signs](https://universe.roboflow.com/work-9vtar/traffic-sign-detection-yolov5/dataset/1)**:
+   - Dataset with class labels represented as numbers.
+   - Contains only Korean traffic signs.
+
+2. **[Mixed Traffic Signs (Korean and English)](https://universe.roboflow.com/andres-calderon-unab/traffic-signs-dsjv6/dataset/3)**:
+   - Dataset with both Korean and English traffic signs.
+   - Class labels are written out (e.g., "Speed Limit" instead of numeric).
+
+#### Instructions:
+Both datasets are available in multiple formats to suit different architectures and frameworks.
+Press the **Download** button for the desired format, such as **YOLOv5**, to begin.
+Ensure that your datasets are downloaded and prepared in YOLOv5 format (with images and labels). Update the `data.yaml` file in the `data/` folder to reflect the dataset paths before training.
+
+---
+
 ## 🏗️ How to Use
 
 ### 1. Setup
@@ -35,7 +54,7 @@ pip install -r requirements.txt
 ### 2. Dataset Preparation
 	•	Prepare your dataset in YOLOv5 format (with images and labels).
 	•	Update dataset/data.yaml:
-	•	Set train and val to the paths of your training and validation datasets.
+	•	Set test, train and val to the paths of your testing, training and validation datasets.
 	•	Specify the number of classes and their names.
 
 ### 3. Training
@@ -49,3 +68,25 @@ Modify the data.yaml file in the dataset/ folder to reflect the dataset configur
 ### 4. Evaluation
 
 Evaluate the model using the final trained weights. Save the results for comparison and analysis.
+
+---
+
+## 📊 Results
+
+The proposed architecture and model were compared with baseline architectures of YOLOv5 and YOLOv7. The baseline code for these comparisons is not provided here, as it uses the standard implementations available in the respective repositories. The modifications in this repository focus on improving feature fusion and attention mechanisms over the standard baselines.
+
+---
+
+## 🛠️ Code Highlights
+	•	models/common.py: Contains the implementation of SE blocks and BiFPN.
+	•	models/yolo.py: Integrates the modified layers into the detection pipeline.
+	•	models/yolov5_modified.yaml: Defines the modified architecture for YOLOv5.
+
+---
+
+## 🔧 Future Work
+	•	Explore further enhancements to the architecture.
+	•	Experiment with additional datasets and augmentations.
+	•	Optimize training parameters for real-time applications.
+
+---
