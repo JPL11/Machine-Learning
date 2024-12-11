@@ -54,6 +54,7 @@ pip install -r requirements.txt
 ### 2. Replace Files
 
 Replace the original files in the models/ directory of the YOLOv5 repository with the modified files provided in this project:
+
 	•	Replace models/common.py with the version in this repository.
 	•	Replace models/yolo.py with the version in this repository.
 	•	Replace the yolov5_modified.yaml in the models/ directory.
@@ -66,8 +67,8 @@ The provided notebooks are designed to be executed in Google Colab to leverage t
 
 	1.	Open the desired notebook in Google Colab:
  
-	•	For Dataset 1 (Korean Traffic Signs): Use notebooks/dataset1_training.ipynb.
-	•	For Dataset 2 (Mixed Traffic Signs): Use notebooks/dataset2_training.ipynb.
+	•	For Dataset 1 (Korean Traffic Signs): Use YOLOv5proposed1.ipynb.
+	•	For Dataset 2 (Mixed Traffic Signs): Use YOLOv5proposed2.ipynb.
  
 	2.	Upload the data.yaml file to Colab:
  
@@ -85,6 +86,7 @@ The provided notebooks are designed to be executed in Google Colab to leverage t
 ### 4. Training
 
 Choose the notebook for the appropriate dataset:
+
 	•	For Dataset 1: Use YOLOv5proposed1.ipynb. 
 	•	For Dataset 2: Use YOLOv5proposed2.ipynb.
 
