@@ -38,7 +38,7 @@ This project uses two datasets for training and evaluation:
 #### Instructions:
 Both datasets are available in multiple formats to suit different architectures and frameworks.
 Press the **Download** button for the desired format, such as **YOLOv5**, to begin.
-Ensure that your datasets are downloaded and prepared in YOLOv5 format (with images and labels). Update the `data.yaml` file in the `data/` folder to reflect the dataset paths before training.
+Ensure that your datasets are downloaded and prepared in YOLOv5 format (with images and labels). Update the `data.yaml` file in the `dataset/` folder to reflect the dataset paths before training.
 
 ---
 
@@ -73,7 +73,7 @@ Evaluate the model using the final trained weights. Save the results for compari
 
 ## 📊 Results
 
-The proposed architecture and model were compared with baseline architectures of YOLOv5 and YOLOv7. The baseline code for these comparisons is not provided here, as it uses the standard implementations available in the respective repositories. The modifications in this repository focus on improving feature fusion and attention mechanisms over the standard baselines.
+The proposed architecture and model were compared with baseline architectures of YOLOv5 and YOLOv7 using the first dataset. The baseline code for these comparisons is not provided here, as it uses the standard implementations available in the respective repositories. The modifications in this repository focus on improving feature fusion and attention mechanisms over the standard baselines.
 
 ---
 
