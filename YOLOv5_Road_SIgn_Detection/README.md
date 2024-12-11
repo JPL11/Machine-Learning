@@ -65,16 +65,19 @@ The modified files include the implementations of the SE Block, BiFPN, and other
 The provided notebooks are designed to be executed in Google Colab to leverage their GPU resources for training.
 
 	1.	Open the desired notebook in Google Colab:
+ 
 	•	For Dataset 1 (Korean Traffic Signs): Use notebooks/dataset1_training.ipynb.
 	•	For Dataset 2 (Mixed Traffic Signs): Use notebooks/dataset2_training.ipynb.
  
 	2.	Upload the data.yaml file to Colab:
+ 
  	•	Prepare your dataset in YOLOv5 format (with images and labels).
 	•	Update dataset/data.yaml:
 	•	Set test, train and val to the paths of your testing, training and validation datasets.
 	•	Specify the number of classes and their names.
  
 	3.	Enable GPU acceleration:
+ 
 	•	Go to Runtime > Change runtime type > Hardware accelerator > GPU.
  
 	4.	Execute the cells to train the model.
