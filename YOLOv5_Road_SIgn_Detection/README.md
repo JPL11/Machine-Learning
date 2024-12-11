@@ -42,8 +42,8 @@ The model architecture is defined in `models/yolov5s.yaml`. The changes include:
 ### 1. Setup
 Clone the repository and install the necessary dependencies:
 ```bash
-git clone https://github.com/JPL11/Machine-Learning.git
-cd Machine-Learning/YOLOv5_Road_SIgn_Detection
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
 pip install -r requirements.txt
 ```
 ### 2. Dataset Preparation
