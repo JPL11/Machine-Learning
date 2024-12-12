@@ -33,7 +33,7 @@ This project uses two datasets for training and evaluation:
 
 2. **[Mixed Traffic Signs (Korean and English)](https://universe.roboflow.com/andres-calderon-unab/traffic-signs-dsjv6/dataset/3)**:
    - Dataset with both Korean and English traffic signs.
-   - Class labels are written out (e.g., "Speed Limit" instead of numeric).
+   - Class labels are numvered but more than the first one
 
 #### Instructions:
 Both datasets are available in multiple formats to suit different architectures and frameworks.
