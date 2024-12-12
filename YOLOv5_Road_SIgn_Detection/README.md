@@ -102,6 +102,19 @@ Evaluate the model using the final trained weights. Save the results for compari
 
 The proposed architecture and model were compared with baseline architectures of YOLOv5 and YOLOv7 using the first dataset. The baseline code for these comparisons is not provided here, as it uses the standard implementations available in the respective repositories. The modifications in this repository focus on improving feature fusion and attention mechanisms over the standard baselines.
 
+YOLOv5 baseline
+
+![33fc872617042166ba3c4ba5c08b39c7fca32b7ba4ab9d917773f60df7f73720](https://github.com/user-attachments/assets/efe94943-28dd-4678-8d68-84a411187ff6)
+
+YOLOv7 baseline
+
+![Screenshot 2024-12-11 at 2 03 08 PM](https://github.com/user-attachments/assets/3d2fdb72-f1e8-47d7-b7ce-0dbf5d9c2311)
+
+YOLOv5 proposed
+
+![d36c4870f6fa62f71b53bac59e2b809b8866a7e9be89a057fd3c6ef764bb0277](https://github.com/user-attachments/assets/bae09ea1-80de-4137-8f74-5aee15fac049)
+
+
 ---
 
 ## 🛠️ Code Highlights
