@@ -114,28 +114,26 @@ YOLOv5 proposed
 
 ![d36c4870f6fa62f71b53bac59e2b809b8866a7e9be89a057fd3c6ef764bb0277](https://github.com/user-attachments/assets/bae09ea1-80de-4137-8f74-5aee15fac049)
 
-Key Metrics:
+### Key Metrics:
+| Metric               | Modified YOLOv5 | Baseline YOLOv5 | YOLOv7 Baseline |
+|----------------------|-----------------|-----------------|-----------------|
+| **Precision**        | ~0.9 (Stable)  | ~0.85-0.88     | Fluctuates, drops sharply (~0.5 at times) |
+| **Recall**           | ~0.88          | ~0.85          | ~0.4           |
+| **mAP@0.5**          | ~0.88          | ~0.86          | ~0.45          |
+| **mAP@0.5:0.95**     | ~0.7           | ~0.65          | ~0.4           |
 
-Metric	Modified YOLOv5	Baseline YOLOv5	YOLOv7 Baseline
-Precision	~0.9 (Stable)	~0.85-0.88	Fluctuates, drops sharply (~0.5 at times)
-Recall	~0.88	~0.85	~0.4
-mAP@0.5	~0.88	~0.86	~0.45
-mAP@0.5:0.95	~0.7	~0.65	~0.4
+### Observations:
+- **Modified YOLOv5** shows **improved stability** across all metrics compared to both baselines.
+- **YOLOv7 Baseline** struggles with inconsistent precision and significantly lower recall and mAP values, making it less reliable for object detection tasks.
+- **Baseline YOLOv5** performs better than YOLOv7, but the proposed modifications in YOLOv5 lead to notable performance gains.
 
-Observations:
-	•	Modified YOLOv5 shows improved stability across all metrics compared to both baselines.
-	•	YOLOv7 Baseline struggles with inconsistent precision and significantly lower recall and mAP values, making it less reliable for object detection tasks.
-	•	Baseline YOLOv5 performs better than YOLOv7, but the proposed modifications in YOLOv5 lead to notable performance gains.
+### Why the Modified YOLOv5 is Better:
+1. **Attention Mechanisms:** The integration of SEBlock helps the model focus on key features, improving precision and recall.
+2. **Improved Neck (BiFPN):** Enhances multi-scale feature fusion, enabling better detection of objects at various scales.
+3. **Stability:** Metrics for the modified YOLOv5 are more stable across training steps, ensuring reliable performance.
 
-Why the Modified YOLOv5 is Better:
-	1.	Attention Mechanisms: The integration of SEBlock helps the model focus on key features, improving precision and recall.
-	2.	Improved Neck (BiFPN): Enhances multi-scale feature fusion, enabling better detection of objects at various scales.
-	3.	Stability: Metrics for the modified YOLOv5 are more stable across training steps, ensuring reliable performance.
-
-
-The proposed YOLOv5 modification, with its enhanced architecture, achieves better precision, recall, and mAP compared to the baselines. It outperforms YOLOv7 in all metrics and exhibits significant stability improvements over the baseline YOLOv5.
-
-These results demonstrate the effectiveness of the modifications, making the proposed YOLOv5 architecture a better option for real-world object detection tasks.
+### Conclusion:
+The proposed YOLOv5 modification, with its enhanced architecture, achieves better precision, recall, and mAP compared to the baselines.
 
 ---
 
