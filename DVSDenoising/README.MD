@@ -37,7 +37,8 @@ Each row in the CSV contains a timestamp, label (1 = signal, 0 = noise), and a f
 - TensorFlow 2.8–2.13
 
 ```bash
-pip install tensorflow pandas numpy scikit-learn matplotlib```
+pip install tensorflow pandas numpy scikit-learn matplotlib
+bash```
 
 ## 🚀 How to Train the MLPF Model
 1. Open DVSNetWorkDenoiser.ipynb in Google Colab
