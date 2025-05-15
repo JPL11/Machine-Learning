@@ -61,7 +61,7 @@ pip install tensorflow pandas numpy scikit-learn matplotlib
 5. Save as: mlpf_model_best.h5
 
 ## 🧪 Evaluation: ROC and AUC HotelBar
-
+![ScreenShot](ROC.png)
 
 ## 🧠 Deploying in jAER
 1. Convert .h5 model to .pb (frozen graph)
