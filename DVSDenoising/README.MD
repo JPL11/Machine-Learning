@@ -15,27 +15,32 @@ Event cameras (Dynamic Vision Sensors) output asynchronous event streams rather 
 
 ## 📦 Datasets
 
-### 1. HotelBar Dataset
+### 1. HotelBar Dataset (Static Cmaera)
+A recording from a DVS in a hotel bar setting with ground-truth labeling of noise vs signal events. This sequence is part of the DND21 dataset from the authors’ project. You can obtain it from the DeNoising Dynamic Vision Sensors 2021 (DND21) site. Specifically, download the “hotel-bar” recording (available as an .aedat file via the DND21 Google Drive link on their site). The DND21 homepage is here: DND21 Dataset and Methods (see the Datasets section for the HotelBar file).
 - Source: DND21 Project  
 - Download: [https://sites.google.com/view/dnd21](https://sites.google.com/view/dnd21)
 
 ### 2. Dynamic 6DOF Dataset (Moving Camera)
+An event dataset from the Event-Camera Dataset (UZH), specifically the dynamic_6dof sequence (a camera moving through an office with a person). This provides a moving-camera scenario for testing denoising on more complex backgrounds. Download the dynamic_6dof sequence from the UZH-RPG dataset page (under Event-based data for pose estimation..., find dynamic_6dof and download the "Text (zip)" format which contains the event stream in text form).
 - Source: UZH-RPG  
 - Download: [https://rpg.ifi.uzh.ch/davis_data.html](https://rpg.ifi.uzh.ch/davis_data.html)
 
-### 3. Mixed Labeled CSV Data (Used for Training)
-- Google Drive: [Training Data CSVs](https://drive.google.com/drive/folders/1fR8x3lTcO7qpxfItNjvAbTx_6hyiI6i9)
-
-Each row in the CSV contains a timestamp, label (1 = signal, 0 = noise), and a flattened 7x7 or 25x25 time-surface patch.
-
----
-
 ## ⚙️ Setup & Dependencies
+
+This project is implemented in Python (tested with Python 3.9). We provide Jupyter notebooks for interactive use (especially via Google Colab, which was used for training with GPU acceleration). The development and training were done on a machine with an NVIDIA A100 GPU (40GB), so training is quite fast (converges in a few epochs). However, the model is small enough to train on even modest GPUs – using Colab’s free GPU (Tesla T4 or similar) should be sufficient if you reduce data size or epochs slightly.
+
+### Dependencies:
+- TensorFlow 2.x (tested with TF 2.8): used for building and training the MLPF neural network (Keras API). The model is saved in Keras .h5 format and converted to a TensorFlow frozen graph for deployment.
+- NumPy & Pandas: for data manipulation (loading CSV of events, etc.).
+- scikit-learn: for computing evaluation metrics like ROC curves and AUC, if not done manually.
+- (Optional) matplotlib: if you want to visualize ROC curves or plot event distributions.
+No special libraries are needed for the BAF/STCF implementations (they are simple loops/calculations), aside from NumPy for efficiency.
 
 ### Requirements
 - Python 3.9+
 - TensorFlow 2.8–2.13
 
+You can install the required packages via pip:
 ```bash
 pip install tensorflow pandas numpy scikit-learn matplotlib
 ```
@@ -55,11 +60,8 @@ pip install tensorflow pandas numpy scikit-learn matplotlib
 
 5. Save as: mlpf_model_best.h5
 
-##🧪 Evaluation: ROC and AUC
-Filter	HotelBar AUC	Driving AUC
-BAF	~0.89	~0.79
-STCF	~0.96	~0.83
-MLPF	~0.97	~0.89
+##🧪 Evaluation: ROC and AUC HotelBar
+
 
 ## 🧠 Deploying in jAER
 1. Convert .h5 model to .pb (frozen graph)
