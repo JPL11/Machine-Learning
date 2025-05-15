@@ -60,7 +60,7 @@ pip install tensorflow pandas numpy scikit-learn matplotlib
 
 5. Save as: mlpf_model_best.h5
 
-##🧪 Evaluation: ROC and AUC HotelBar
+## 🧪 Evaluation: ROC and AUC HotelBar
 
 
 ## 🧠 Deploying in jAER
